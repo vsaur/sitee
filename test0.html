@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Page</title>
+  <link rel="stylesheet" type="text/css" href="test0.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <div class="student-info">
+        <span class="student-name">John Doe</span>
+        <span class="date-time">June 5, 2023 10:00 AM</span>
+      </div>
+    </header>
+    <hr>
+    <div class="rules-section">
+      <h2>Rules to Follow:</h2>
+      <ul>
+        <li>Ensure a stable internet connection.</li>
+        <li>Navigating to other screens during the test is not allowed.</li>
+        <li>If caught cheating, your account will be blocked.</li>
+        <li>Allow access to your camera and microphone for monitoring purposes.</li>
+        <li>Read each question carefully before answering.</li>
+        <li>Do not navigate away from the test page during the examination.</li>
+      </ul>
+      <p>Please make sure your camera and microphone are enabled:</p>
+      <div class="camera-mic-icons">
+        <img id="camera-icon" src="camera-icon.png" alt="Camera Icon">
+        <img id="mic-icon" src="mic-icon.png" alt="Microphone Icon">
+      </div>
+    </div>
+    <div class="take-test-rectangle">
+      <button id="take-test-button" class="take-test-link">Take Test</button>
+    </div>
+  </div>
+
+  <script src="test.js"></script>
+  <script>
+    // Check camera and microphone availability
+    function checkCameraAndMicrophone() {
+      navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+        .then(function(stream) {
+          // Camera and microphone are enabled
+          document.getElementById('take-test-button').addEventListener('click', function() {
+            location.href = "exam.html";
+          });
+        })
+        .catch(function(error) {
+          // Camera and microphone are not enabled
+          alert("Please enable your camera and microphone to take the test.");
+        });
+    }
+
+    // Call the function to check camera and microphone on page load
+    window.addEventListener('load', checkCameraAndMicrophone);
+  </script>
+</body>
+</html>

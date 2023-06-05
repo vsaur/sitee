@@ -1,0 +1,80 @@
+/* CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .header .logo {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .header .student-details {
+    margin-left: 20px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .slide-section {
+    width: 600px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide-content h2 {
+    margin-bottom: 10px;
+  }
+  
+  .slide-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .slide-content li {
+    margin-bottom: 5px;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .navigation-buttons .prev-button,
+  .navigation-buttons .next-button,
+  .navigation-buttons .save-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #228B22;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .navigation-buttons .prev-button:hover,
+  .navigation-buttons .next-button:hover,
+  .navigation-buttons .save-button:hover {
+    background-color: #1B5F1B;
+  }
+  
+  .slide-counter {
+    margin-left: 10px;
+  }
+  

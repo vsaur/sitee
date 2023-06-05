@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(10, 74, 12); /* Set the background color to pink */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c622c; /* Dark Green Background Color in Hexadecimal */
+  color: #fff;
+  padding: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.rectangle {
+  background-color: #0eb863; /* White Background Color */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  color: #000;
+}
+
+.rectangle h2 {
+  margin: 0;
+}
+
+.input-rectangle {
+  margin-top: 20px;
+}
+
+.input-rectangle input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.button-rectangle {
+  margin-top: 20px;
+}
+
+.button-rectangle a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #006400; /* Dark Green Background Color in Hexadecimal */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button-rectangle a:hover {
+  background-color: #004000; /* Darker Green Background Color in Hexadecimal */
+}

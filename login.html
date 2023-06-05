@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="login.css">
+  <script src="script.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="blurry-bg"></div>
+    <div class="login-box">
+      <div class="circle">
+        <img src="person-icon.png" alt="Person Icon">
+      </div>
+      <h2>Login</h2>
+      <form onsubmit="return validateLogin()">
+        <div class="input-group">
+          <label for="loginEmail">Email:</label>
+          <input type="email" id="loginEmail" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group password-field">
+          <label for="loginPassword">Password:</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required>
+          <span class="eye-icon"></span>
+        </div>
+        <div class="form-options">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit">Login</button>
+        <p id="loginError" class="error-message"></p>
+      </form>
+      <p>Don't have an account? <a href="course.html">Sign up</a></p>
+    </div>
+  </div>
+
+  <script>
+    const eyeIcon = document.querySelector('.eye-icon');
+    const passwordField = document.querySelector('#loginPassword');
+
+    eyeIcon.addEventListener('click', function () {
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.classList.add('eye-icon-active');
+      } else {
+        passwordField.type = 'password';
+        eyeIcon.classList.remove('eye-icon-active');
+      }
+    });
+
+    function validateLogin() {
+      // Get the login details
+      const loginEmail = document.getElementById('loginEmail').value;
+      const loginPassword = document.getElementById('loginPassword').value;
+
+      // Check if login details match the signup details (replace with your logic)
+      const signupEmail = 'example@example.com';
+      const signupPassword = 'password123';
+
+      if (loginEmail === signupEmail && loginPassword === signupPassword) {
+        window.location.href = "next-page.html"; // Replace "next-page.html" with the actual URL or filename of the page you want to navigate to
+        return false; // Prevent form submission
+      } else {
+        const loginError = document.getElementById('loginError');
+        loginError.textContent = 'Invalid email or password';
+        return false; // Prevent form submission
+      }
+    }
+  </script>
+</body>
+</html>

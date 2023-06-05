@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam Page</title>
+  <link rel="stylesheet" type="text/css" href="exam.css">
+  <style>
+    .submit-section {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+
+    #submit-button {
+      background-color: blue;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">Logo</div>
+    <div class="student-details">
+      <div>Student Name</div>
+      <div>Date and Time</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="slide-section">
+      <div class="slide">
+        <div class="slide-content">
+          <h2>1. What is the purpose of Kruskal's algorithm?</h2>
+          <ul>
+            <li><input type="radio" name="option1" value="1"> To find the shortest path between two vertices in a graph.</li>
+            <li><input type="radio" name="option1" value="2"> To find the maximum flow in a network.</li>
+            <li><input type="radio" name="option1" value="3"> Oo find the minimum spanning tree of a weighted graph.</li>
+            <li><input type="radio" name="option1" value="4"> To find the strongly connected components in a graph.</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>2. Kruskal's algorithm is a greedy algorithm. What does this mean?</h2>
+          <ul>
+            <li><input type="radio" name="option2" value="1"> It makes decisions based on the current best choice without considering future consequences.</li>
+            <li><input type="radio" name="option2" value="2"> It exhaustively explores all possible paths to find the optimal solution.</li>
+            <li><input type="radio" name="option2" value="3"> It backtracks when it encounters a dead-end to find an alternative solution.</li>
+            <li><input type="radio" name="option2" value="4"> It uses dynamic programming techniques to optimize the solution.</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>3. Which data structure is commonly used in Kruskal's algorithm to efficiently determine whether adding an edge creates a cycle?</h2>
+          <ul>
+            <li><input type="radio" name="option3" value="1"> Heap</li>
+            <li><input type="radio" name="option3" value="2"> Queue</li>
+            <li><input type="radio" name="option3" value="3"> Stack</li>
+            <li><input type="radio" name="option3" value="4"> Union-Find</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>4. In Kruskal's algorithm, edges are sorted in ascending order of their weights. What happens if there are multiple edges with the same weight?</h2>
+          <ul>
+            <li><input type="radio" name="option3" value="1"> Only one of the edges is considered in the MST.</li>
+            <li><input type="radio" name="option3" value="2"> All the edges with the same weight are included in the MST.</li>
+            <li><input type="radio" name="option3" value="3"> The sorting order is arbitrary and doesn't affect the final MST.</li>
+            <li><input type="radio" name="option3" value="4"> The algorithm cannot handle multiple edges with the same weight.</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>5. Kruskal's algorithm can be applied to which type of graphs?</h2>
+          <ul>
+            <li><input type="radio" name="option3" value="1"> Directed graphs only</li>
+            <li><input type="radio" name="option3" value="2"> Undirected graphs only</li>
+            <li><input type="radio" name="option3" value="3"> Both directed and undirected graphs</li>
+            <li><input type="radio" name="option3" value="4"> Weighted graphs only</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>6. How does Kruskal's algorithm handle disconnected components in a graph?</h2>
+          <ul>
+            <li><input type="radio" name="option3" value="1"> It treats each disconnected component as a separate graph and finds an MST for each component.</li>
+            <li><input type="radio" name="option3" value="2"> It ignores disconnected components and focuses only on finding the MST for the connected components.</li>
+            <li><input type="radio" name="option3" value="3"> It removes all disconnected components from the graph before applying the algorithm.</li>
+            <li><input type="radio" name="option3" value="4"> It assigns a large weight to the edges connecting disconnected components to ensure they are not included in the MST.</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>7. Which of the following statements is true about Kruskal's algorithm?</h2>
+          <ul>
+            <li><input type="radio" name="option3" value="1"> It guarantees to find the unique minimum spanning tree for any given graph.</li>
+            <li><input type="radio" name="option3" value="2"> It may result in different minimum spanning trees for the same graph, depending on the order of edge selection.</li>
+            <li><input type="radio" name="option3" value="3"> It always finds the maximum spanning tree of the graph.</li>
+            <li><input type="radio" name="option3" value="4"> It requires the graph to be a complete graph.</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>8. Kruskal's algorithm can handle graphs with negative-weight edges.</h2>
+          <ul>
+            <li><input type="radio" name="option3" value="1"> True</li>
+            <li><input type="radio" name="option3" value="2"> False</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>9. In Kruskal's algorithm, what is the purpose of the "Union" operation in the Union-Find data structure?</h2>
+          <ul>
+            <li><input type="radio" name="option3" value="1"> To find the smallest edge in the graph.</li>
+            <li><input type="radio" name="option3" value="2"> To merge two disjoint sets into a single set.</li>
+            <li><input type="radio" name="option3" value="3"> To select the next edge with the minimum weight.</li>
+            <li><input type="radio" name="option3" value="4"> To determine the total weight of the minimum spanning tree.</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-content">
+          <h2>10. Which step is not part of Kruskal's algorithm?</h2>
+          <ul>
+            <li><input type="radio" name="option3" value="1"> Sort the edges in ascending order of their weights.</li>
+            <li><input type="radio" name="option3" value="2"> Iterate through the sorted edges and add them to the MST if they don't create a cycle.</li>
+            <li><input type="radio" name="option3" value="3"> Initialize a forest where each vertex is a separate tree.</li>
+            <li><input type="radio" name="option3" value="4"> Calculate the shortest path between two given vertices.</li>
+          </ul>
+        </div>
+        <div class="navigation-buttons">
+          <div class="prev-button">Prev</div>
+          <div class="save-button">Save</div>
+          <div class="slide-counter"></div>
+          <div class="next-button">Next</div>
+        </div>
+      </div>
+      <!-- Add more slides here -->
+      
+    </div>
+    <div class="submit-section">
+      <button id="submit-button">Submit</button>
+    </div>
+  </div>
+  <script>
+    // Add event listener to the submit button
+    document.getElementById("submit-button").addEventListener("click", function() {
+      // Redirect to the next page
+      window.location.href = "profile.html";
+    });
+  </script>
+
+  <script src="exam.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="signup-box">
+      <h2>Sign Up</h2>
+      <form onsubmit="return validateForm()">
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" placeholder="Enter your first name" required>
+        </div>
+        <div class="input-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" placeholder="Enter your last name" required>
+        </div>
+        <div class="input-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" required>
+        </div>
+        <div class="input-group password-field">
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+          <span class="eye-icon"></span>
+        </div>
+        <div id="password-validation-message" class="validation-message"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const eyeIcon = document.querySelector('.eye-icon');
+    const passwordField = document.querySelector('#password');
+
+    eyeIcon.addEventListener('click', function () {
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.classList.add('eye-icon-active');
+      } else {
+        passwordField.type = 'password';
+        eyeIcon.classList.remove('eye-icon-active');
+      }
+    });
+
+    function validateForm() {
+      const password = passwordField.value;
+
+      if (!password.match(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)) {
+        const validationMessage = document.getElementById('password-validation-message');
+        validationMessage.textContent = 'Password must be at least 8 characters long and contain at least one letter, one number, and one special character.';
+        return false;
+      }
+
+      window.location.href = "login.html"; // Replace "next-page.html" with the actual URL or filename of the page you want to navigate to
+      return false; // Prevent form submission
+    }
+  </script>
+</body>
+</html>

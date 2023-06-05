@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <link rel="stylesheet" type="text/css" href="profile.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">Logo</div>
+    <div class="profile-pic"><img src="profile-pic.jpg" alt="Profile Pic"></div>
+    <div class="notification-icon"><img src="notification-icon.jpg" alt="Notification Icon"></div>
+  </div>
+  
+  <div class="search-section">
+    <input type="text" class="search-input" placeholder="Search...">
+  </div>
+  
+  <div class="content">
+    <div class="profile-box">
+      <!-- Include the content from profile.html here -->
+      <div class="profile-section">
+        <div class="profile-details">
+          <div class="profile-pic-large"><img src="profile-pic.jpg" alt="Profile Pic"></div>
+          <div class="profile-info">
+            <h2 id="profileName">Name</h2>
+            <p id="profileBio">Bio about the student</p>
+            <p id="profileEducation">Highest education achieved: XYZ</p>
+          </div>
+        </div>
+        <a href="editprofile.html" class="edit-profile-link">Edit Profile</a>
+        <!-- Add more content for the profile page here -->
+        
+      </div>
+    </div>
+    
+    <div class="study-material-box">
+      <!-- Include the content from study_material.html here -->
+      <div class="study-material-section">
+        <h2>Kruskal's Algorithm Study Material</h2>
+        <p>Content and resources for studying Kruskal's Algorithm.</p>
+        <a href="krushkal.pdf">View material</a>
+      </div>
+    </div>
+    
+    <div class="score-box">
+      <div class="score-section">
+        <h2>Quiz Score</h2>
+        <div class="score-percentage">60%</div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Retrieve the query parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Get the profile data from the query parameters
+    const name = urlParams.get('name');
+    const bio = urlParams.get('bio');
+    const education = urlParams.get('education');
+
+    // Update the profile information in the profile.html page
+    document.getElementById('profileName').textContent = name;
+    document.getElementById('profileBio').textContent = bio;
+    document.getElementById('profileEducation').textContent = `Highest education achieved: ${education}`;
+  </script>
+</body>
+</html>
